@@ -11,21 +11,23 @@ document.addEventListener("DOMContentLoaded", () => {
       },
     });
   
-    // Welcome Animation (New Holographic Wave Effect)
+        // Welcome Animation (New Holographic Wave Effect)
     const welcome = document.getElementById("welcome");
     if (welcome && !sessionStorage.getItem("welcomeShown")) {
       welcome.classList.add("active");
       sessionStorage.setItem("welcomeShown", "true");
-  
+    
       const welcomeText = document.querySelector(".welcome-text");
-      const text = "Welcome to WEMCO";
-  
-      // Split text into characters
+      const text = "Welcome\nto\nWEMCO";
+    
+      // Split text into characters, handling line breaks
       welcomeText.innerHTML = text
         .split("")
-        .map((char) => `<span class="letter">${char === " " ? " " : char}</span>`)
+        .map((char) => 
+          char === "\n" ? "<br>" : `<span class="letter">${char === " " ? " " : char}</span>`
+        )
         .join("");
-  
+    
       // Holographic Wave Animation
       gsap.from(".letter", {
         opacity: 0,
@@ -46,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
           });
         },
       });
-  
+      
       // Canvas Wave Effect
       const canvas = document.getElementById("welcome-canvas");
       const ctx = canvas.getContext("2d");
