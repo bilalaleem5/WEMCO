@@ -272,7 +272,33 @@ body.dark-mode .menu-toggle:hover {
 }
 @media (max-width: 768px) {
   .logo {
-    font-size: 1.5rem; /* Reduce font size */
+    font-size: 2rem; /* Reduce logo size */
+  }
+
+  .menu-toggle {
+    display: block; /* Ensure it's visible */
+    font-size: 2rem; /* Adjust size */
+  }
+
+  .nav-links {
+    display: none; /* Hide the nav links by default */
+    flex-direction: column;
+    position: center;
+    top: 100%;
+    right: 0;
+    background: #f8f7fa;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  body.dark-mode .nav-links {
+    background: #2c3e66;
+  }
+
+  .nav-links.active {
+    display: flex; /* Show when menu is toggled */
   }
 }
 
