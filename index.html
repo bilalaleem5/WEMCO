@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WEMCO Engineers - Home</title>
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="images/webp" href="images/logo.webp">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/TextPlugin.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
@@ -19,7 +22,7 @@
   <!-- Welcome Intro -->
   <div id="welcome" class="welcome">
     <h1 class="welcome-text">Welcome to WEMCO</h1>
-    <div class="welcome-particles"></div>
+    <canvas id="welcome-canvas" class="welcome-canvas"></canvas>
   </div>
 
   <!-- Navbar -->
@@ -32,15 +35,20 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
       <div class="menu-toggle">☰</div>
+      <div class="theme-toggle" id="theme-toggle">
+        <span class="sun">☀️</span>
+        <span class="moon">🌙</span>
+      </div>
+      
     </div>
   </nav>
 
   <!-- Hero Section -->
   <section id="hero" class="hero">
     <div class="hero-content">
-      <h1>Engineering Excellence Since 1996</h1><br>
-      <p>Innovating Facility Management Solutions</p>
-      <a href="#services" class="hero-btn">Discover More</a>
+      <h1>Engineering Excellence Since 1996</h1><br><br><br>
+      <p>Innovating Facility Management Solutions</p><br><br>
+      <a href="#services" class="hero-btn">Discover More</a><br><br>
     </div>
     <div class="hero-slider">
       <div class="slide" style="background-image: url('images/1.webp');">
@@ -60,6 +68,7 @@
       </div>
     </div>
   </section>
+  <div class="divider"></div><br>
 
   <!-- Services -->
   <section id="services" class="section">
@@ -92,9 +101,43 @@
         <p>Advanced safety and surveillance systems.</p>
       </div>
     </div>
-  </section>
+  </section><br>
+  <div class="divider"></div><br>
 
-  <!-- Mission & Vision (Redesigned) -->
+  <!-- Project Timeline -->
+  <section id="timeline" class="section timeline-section">
+    <h2>Our Project Journey</h2>
+    <p class="intro-text">A timeline of our notable projects and milestones.</p>
+    <div class="timeline">
+      <div class="timeline-item left">
+        <div class="timeline-content">
+          <h3>1996 - Founded</h3>
+          <p>WEMCO Engineers established with a vision for excellence.</p>
+        </div>
+      </div>
+      <div class="timeline-item right">
+        <div class="timeline-content">
+          <h3>2005 - First Major Project</h3>
+          <p>Completed a landmark facility management project.</p>
+        </div>
+      </div>
+      <div class="timeline-item left">
+        <div class="timeline-content">
+          <h3>2015 - Sustainability Initiative</h3>
+          <p>Launched eco-friendly engineering solutions.</p>
+        </div>
+      </div>
+      <div class="timeline-item right">
+        <div class="timeline-content">
+          <h3>2023 - 200+ Projects</h3>
+          <p>Achieved a milestone of over 200 projects annually.</p>
+        </div>
+      </div>
+    </div>
+  </section><br>
+  <div class="divider"></div><br>
+
+  <!-- Mission & Vision -->
   <section id="mission" class="section">
     <h2>Our Mission & Vision</h2>
     <p class="intro-text">Guiding principles that drive our success.</p>
@@ -121,9 +164,10 @@
         </ul>
       </div>
     </div>
-  </section>
+  </section><br>
+  <div class="divider"></div><br>
 
-  <!-- Guaranteed Client Satisfaction (Redesigned) -->
+  <!-- Guaranteed Client Satisfaction -->
   <section id="satisfaction" class="section">
     <h2>Guaranteed Client Satisfaction</h2>
     <p class="intro-text">Our commitment to excellence in numbers.</p>
@@ -153,7 +197,8 @@
         </div>
       </div>
     </div>
-  </section>
+  </section><br>
+  <div class="divider"></div><br>
 
   <!-- Clients -->
   <section id="clients" class="section">
@@ -163,13 +208,21 @@
       <div class="clients-inner">
         <img src="images/16.webp" alt="Client 1">
         <img src="images/17.webp" alt="Client 2">
-        <img src="images/18.webp" alt="Client 1">
-        <img src="images/20.webp" alt="Client 2">
-        <img src="images/21.webp" alt="Client 2">
-        <img src="images/19.webp" alt="Client 2">
+        <img src="images/18.webp" alt="Client 3">
+        <img src="images/20.webp" alt="Client 4">
+        <img src="images/21.webp" alt="Client 5">
+        <img src="images/19.webp" alt="Client 6">
+        <!-- Duplicated for infinite loop -->
+        <img src="images/16.webp" alt="Client 1">
+        <img src="images/17.webp" alt="Client 2">
+        <img src="images/18.webp" alt="Client 3">
+        <img src="images/20.webp" alt="Client 4">
+        <img src="images/21.webp" alt="Client 5">
+        <img src="images/19.webp" alt="Client 6">
       </div>
     </div>
-  </section>
+  </section><br>
+  <div class="divider"></div>
 
   <!-- Footer -->
   <footer class="footer">
